@@ -36,10 +36,24 @@
                     data_list:[]
 
                 },
+                
+                // 生命周期函数, 类似中间件
+                created:function(){
+                    alert('created')
+                },
+                mounted:function(){
+                    alert('mounted')
+                },
+
                 // 定义方法
                 methods:{
                     AddNum:function(){
                         this.count+=1
+                    },
+                    AddData:function(){
+                        // 输入到浏览器终端
+                        console.log(a)
+                        let a = 10
                     }
                 }
             })
@@ -110,7 +124,7 @@
             <!-- 单选框 -->
             <input type="radio" name="gender" value="男" v-model='data'>男
             <input type="radio" name="gender" value="女" v-model='data'>女
-            <!-- <p>{{data}}</p> -->
+            <p>{{data}}</p>
             
             <!-- 复选框 -->
             <input type="checkbox" name="ming" value="吃饭" v-model='data_list'>吃饭
@@ -126,7 +140,9 @@
                 <option value="玄幻">玄幻</option>
                 <option value="恐怖">恐怖</option>
             </select>
-            <!-- <p>{{data}}</p> -->
+            <p>{{data}}</p>
+
+            <button @click='AddData'>点击</button>
         </div>
 
 
