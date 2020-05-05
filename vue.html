@@ -15,7 +15,24 @@
                 data:{
                     name:'Python',
                     url:'https://www.baidu.com',
-                    count:0
+                    count:0,
+                    numlist:[1, 2, 3, 4, 5],
+                    strlist:['a', 'b', 'c', 'd', 'e'],
+                    datadict:{
+                        name:'itcast',
+                        gender:'man'
+                    },
+                    dictlist:[
+                        {
+                            name:'hua',
+                            gender:'women'
+                        },
+                        {
+                            name:'ming',
+                            gender:'man'
+                        }
+                    ]
+
                 },
                 // 定义方法
                 methods:{
@@ -52,7 +69,27 @@
             <h2 v-if='count==1'> v-if </h2>
             <h2 v-else-if='count==2'> v-else-if </h2>
             <h2 v-else> v-else </h2>
+            <!-- 符合条件的时候进行展示 -->
+            <h2 v-show='count==5'>v-show</h2>
         </div>
+        <!-- for循环的使用 -->
+        <div>
+            <!-- 基本使用 -->
+            <ul>
+                <li v-for='data in numlist'>{{data}}</li>
+            </ul>
+            <ul>
+                <li v-for='data in strlist'>{{data}}</li>
+            </ul>
+
+            <!-- 下标展示 -->
+            <ul>
+                <li v-for='(data, index) in strlist'>{{data}}--{{index}}</li>
+            </ul>
+
+        </div>
+
+
 
     </div>
     
