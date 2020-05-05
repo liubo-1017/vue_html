@@ -31,7 +31,9 @@
                             name:'ming',
                             gender:'man'
                         }
-                    ]
+                    ],
+                    data:'',
+                    data_list:[]
 
                 },
                 // 定义方法
@@ -87,7 +89,46 @@
                 <li v-for='(data, index) in strlist'>{{data}}--{{index}}</li>
             </ul>
 
+            <ul>
+                <li v-for='(data, key) in datadict'>{{data}}--{{key}}</li>
+            </ul>
+
+            <ul>
+                <li v-for='obj in dictlist'>{{obj.name}}--{{obj.gender}}</li>
+            </ul>
         </div>
+        
+        <!-- 数据双向绑定  v-model -->
+        <div>
+            <!-- 单输入框 -->
+            <!-- <input type="text" v-model='data' > -->
+            <!-- <p>{{data}}</p> -->
+            <!-- 多文本输入框 -->
+            <!-- <textarea v-model='data'> </textarea>
+            <p>{{data}}</p> -->
+            
+            <!-- 单选框 -->
+            <input type="radio" name="gender" value="男" v-model='data'>男
+            <input type="radio" name="gender" value="女" v-model='data'>女
+            <!-- <p>{{data}}</p> -->
+            
+            <!-- 复选框 -->
+            <input type="checkbox" name="ming" value="吃饭" v-model='data_list'>吃饭
+            <input type="checkbox" name="ming" value="睡觉" v-model='data_list'>睡觉
+            <input type="checkbox" name="ming" value="打豆豆" v-model='data_list'>打豆豆
+            <p>{{data_list}}</p>
+
+            <!-- 下拉菜单 -->
+            <select name="" id="" v-model='data'>
+                <option value="言情">言情</option>
+                <option value="都市">都市</option>
+                <option value="武侠">武侠</option>
+                <option value="玄幻">玄幻</option>
+                <option value="恐怖">恐怖</option>
+            </select>
+            <!-- <p>{{data}}</p> -->
+        </div>
+
 
 
 
