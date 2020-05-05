@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue使用</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 加载vue的代码
+            new Vue({
+                // vue 对象名字通过el指定
+                el:'#app',
+                // 定义绑定数据
+                data:{
+                    name:'Python'
+                }
+            })
+        }
+
+    </script>
 </head>
 <body>
+    <!-- 指定一个div标签 通过id指定加载vue对象，在当前标签下可以使用vue的语法 -->
+    <div id='app'>
+        <!-- 加载绑定的数据 -->
+        <h1>{{name}}</h1>
+    </div>
     
+
 </body>
 </html>
