@@ -40,14 +40,19 @@
             <!-- 简写 -->
             <a :href="url">百度2</a>
         </div>
-
+        <br><br>
         <!-- 事件绑定 v-on -->
         <div>
             <!-- <button v-on:click='AddNum'>{{count}}</button> -->
             <!-- 简写 -->
             <button @click='AddNum'>{{count}}</button>
         </div>
-        
+        <!-- 条件判断 -->
+        <div>
+            <h2 v-if='count==1'> v-if </h2>
+            <h2 v-else-if='count==2'> v-else-if </h2>
+            <h2 v-else> v-else </h2>
+        </div>
 
     </div>
     
