@@ -13,7 +13,8 @@
                 el:'#app',
                 // 定义绑定数据
                 data:{
-                    name:'Python'
+                    name:'Python',
+                    url:'https://www.baidu.com'
                 }
             })
         }
@@ -25,6 +26,13 @@
     <div id='app'>
         <!-- 加载绑定的数据 -->
         <h1>{{name}}</h1>
+
+        <!-- 属性值绑定 v-bind -->
+        <div>
+            <a v-bind:href="url">百度</a>
+            <!-- 简写 -->
+            <a :href="url">百度2</a>
+        </div>
     </div>
     
 
